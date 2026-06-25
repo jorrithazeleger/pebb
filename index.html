@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PEBB — Handgemaakte tafels met een uniek design van eigen bodem</title>
+  <meta name="description" content="PEBB maakt handgemaakte tafels met een uniek design. In alle vormen, kleuren, soorten en maten. Showroom in Loods 5, Amersfoort." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.pexels.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <a href="#top" class="wordmark" aria-label="PEBB home">PEBB</a>
+
+    <nav class="main-nav" aria-label="Hoofdmenu">
+      <a href="#collectie" data-i18n="nav.collection">Collectie</a>
+      <a href="#atelier" data-i18n="nav.studio">Over PEBB</a>
+      <a href="#maatwerk" data-i18n="nav.bespoke">Maatwerk</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+
+    <div class="header-right">
+      <div class="lang-toggle" role="group" aria-label="Taal">
+        <button class="lang is-active" data-lang="nl">NL</button>
+        <span class="lang-sep">/</span>
+        <button class="lang" data-lang="en">EN</button>
+      </div>
+      <button class="bag" aria-label="Winkeltas">
+        <span data-i18n="nav.bag">Tas</span> (<span id="bag-count">0</span>)
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <img class="hero-img" src="assets/hero.jpg"
+         onerror="this.onerror=null;this.src='https://images.pexels.com/photos/5865162/pexels-photo-5865162.jpeg?auto=compress&cs=tinysrgb&w=1600'"
+         alt="Handgemaakte tafel van PEBB" />
+    <div class="hero-overlay">
+      <span class="hero-kicker" data-i18n="hero.kicker">Handgemaakt · Amersfoort</span>
+      <h1 class="hero-title" data-i18n="hero.title">Een uniek design van eigen bodem</h1>
+    </div>
+  </section>
+
+  <main>
+
+    <!-- ============ INTRO ============ -->
+    <section class="intro">
+      <p class="intro-statement" data-i18n="intro.statement">
+        PEBB maakt handgemaakte tafels met een uniek design. We maken ze
+        in alle vormen, kleuren, soorten en maten. Jij komt met het idee,
+        wij denken mee in de functionaliteit.
+      </p>
+      <div class="intro-meta">
+        <span data-i18n="intro.place">Amersfoort, NL</span>
+        <span data-i18n="intro.showroom">Showroom Loods 5</span>
+      </div>
+    </section>
+
+    <!-- ============ INDEX ============ -->
+    <nav class="index-bar" id="collectie" aria-label="Collectie-index">
+      <span class="index-label" data-i18n="index.label">De collectie</span>
+      <ol class="index-list">
+        <li><a href="#item-01">01 · Pam</a></li>
+        <li><a href="#item-02">02 · Rond</a></li>
+        <li><a href="#item-03">03 · Organische vorm</a></li>
+        <li><a href="#item-04">04 · Ovaal</a></li>
+        <li><a href="#item-05">05 · Halve cirkel</a></li>
+        <li><a href="#item-06">06 · Salontafel kiezel en kei</a></li>
+      </ol>
+    </nav>
+
+    <!-- ============ ITEMS ============ -->
+
+    <!-- 01 -->
+    <article class="item" id="item-01" data-gallery="01">
+      <div class="item-gallery">
+        <span class="item-no">№ 01</span>
+        <div class="gallery-frame">
+          <button class="gnav prev" aria-label="Vorige foto">&lsaquo;</button>
+          <div class="stage"><img class="stage-img" alt="Eettafel Pam" /></div>
+          <button class="gnav next" aria-label="Volgende foto">&rsaquo;</button>
+          <span class="gallery-count"><span class="cur">01</span> / <span class="total">1</span></span>
+        </div>
+      </div>
+      <div class="item-info">
+        <span class="item-cat" data-i18n="cat.dining">Eettafel</span>
+        <h2 class="item-title">Pam</h2>
+        <p class="item-lead" data-i18n="item01.lead">
+          Onze signatuur. Een kiezelvorm op een unieke poot, in elke
+          kleur die je wilt.
+        </p>
+        <dl class="spec">
+          <dt data-i18n="spec.shape">Vorm</dt><dd data-i18n="item01.shape">Kiezel met unieke poot</dd>
+          <dt data-i18n="spec.material">Materiaal</dt><dd data-i18n="spec.materialval">Beton-look</dd>
+          <dt data-i18n="spec.color">Kleur</dt><dd data-i18n="spec.colorval">Naar keuze · LAB-PAINT</dd>
+          <dt data-i18n="spec.size">Maat</dt><dd data-i18n="spec.sizeval">Meerdere maten</dd>
+          <dt data-i18n="spec.maker">Maker</dt><dd>PEBB</dd>
+        </dl>
+        <div class="buy">
+          <span class="price"><span class="from" data-i18n="price.from">vanaf</span> € 1.950</span>
+          <button class="btn add-to-bag">In de tas</button>
+        </div>
+        <a class="bespoke-link" href="#maatwerk" data-i18n="item.bespoke">of ontwerp je eigen tafel &rarr;</a>
+      </div>
+    </article>
+
+    <!-- 02 -->
+    <article class="item reverse" id="item-02" data-gallery="02">
+      <div class="item-gallery">
+        <span class="item-no">№ 02</span>
+        <div class="gallery-frame">
+          <button class="gnav prev" aria-label="Vorige foto">&lsaquo;</button>
+          <div class="stage"><img class="stage-img" alt="Ronde eettafel" /></div>
+          <button class="gnav next" aria-label="Volgende foto">&rsaquo;</button>
+          <span class="gallery-count"><span class="cur">01</span> / <span class="total">1</span></span>
+        </div>
+      </div>
+      <div class="item-info">
+        <span class="item-cat" data-i18n="cat.dining">Eettafel</span>
+        <h2 class="item-title">Rond</h2>
+        <p class="item-lead" data-i18n="item02.lead">
+          Een ronde eettafel. Geen hoeken, alle ruimte voor gesprek.
+        </p>
+        <dl class="spec">
+          <dt data-i18n="spec.shape">Vorm</dt><dd data-i18n="item02.shape">Rond</dd>
+          <dt data-i18n="spec.material">Materiaal</dt><dd data-i18n="spec.materialval">Beton-look</dd>
+          <dt data-i18n="spec.color">Kleur</dt><dd data-i18n="spec.colorval">Naar keuze · LAB-PAINT</dd>
+          <dt data-i18n="spec.size">Maat</dt><dd data-i18n="spec.sizeval">Meerdere maten</dd>
+          <dt data-i18n="spec.maker">Maker</dt><dd>PEBB</dd>
+        </dl>
+        <div class="buy">
+          <span class="price"><span class="from" data-i18n="price.from">vanaf</span> € 1.300</span>
+          <button class="btn add-to-bag">In de tas</button>
+        </div>
+        <a class="bespoke-link" href="#maatwerk" data-i18n="item.bespoke">of ontwerp je eigen tafel &rarr;</a>
+      </div>
+    </article>
+
+    <!-- 03 -->
+    <article class="item" id="item-03" data-gallery="03">
+      <div class="item-gallery">
+        <span class="item-no">№ 03</span>
+        <div class="gallery-frame">
+          <button class="gnav prev" aria-label="Vorige foto">&lsaquo;</button>
+          <div class="stage"><img class="stage-img" alt="Eettafel met organische vorm" /></div>
+          <button class="gnav next" aria-label="Volgende foto">&rsaquo;</button>
+          <span class="gallery-count"><span class="cur">01</span> / <span class="total">1</span></span>
+        </div>
+      </div>
+      <div class="item-info">
+        <span class="item-cat" data-i18n="cat.dining">Eettafel</span>
+        <h2 class="item-title">Organische vorm</h2>
+        <p class="item-lead" data-i18n="item03.lead">
+          Een vloeiende, organische vorm die zich naar je ruimte voegt.
+        </p>
+        <dl class="spec">
+          <dt data-i18n="spec.shape">Vorm</dt><dd data-i18n="item03.shape">Organisch</dd>
+          <dt data-i18n="spec.material">Materiaal</dt><dd data-i18n="spec.materialval">Beton-look</dd>
+          <dt data-i18n="spec.color">Kleur</dt><dd data-i18n="spec.colorval">Naar keuze · LAB-PAINT</dd>
+          <dt data-i18n="spec.size">Maat</dt><dd data-i18n="spec.sizeval">Meerdere maten</dd>
+          <dt data-i18n="spec.maker">Maker</dt><dd>PEBB</dd>
+        </dl>
+        <div class="buy">
+          <span class="price"><span class="from" data-i18n="price.from">vanaf</span> € 1.650</span>
+          <button class="btn add-to-bag">In de tas</button>
+        </div>
+        <a class="bespoke-link" href="#maatwerk" data-i18n="item.bespoke">of ontwerp je eigen tafel &rarr;</a>
+      </div>
+    </article>
+
+    <!-- 04 -->
+    <article class="item reverse" id="item-04" data-gallery="04">
+      <div class="item-gallery">
+        <span class="item-no">№ 04</span>
+        <div class="gallery-frame">
+          <button class="gnav prev" aria-label="Vorige foto">&lsaquo;</button>
+          <div class="stage"><img class="stage-img" alt="Ovale eettafel" /></div>
+          <button class="gnav next" aria-label="Volgende foto">&rsaquo;</button>
+          <span class="gallery-count"><span class="cur">01</span> / <span class="total">1</span></span>
+        </div>
+      </div>
+      <div class="item-info">
+        <span class="item-cat" data-i18n="cat.dining">Eettafel</span>
+        <h2 class="item-title">Ovaal</h2>
+        <p class="item-lead" data-i18n="item04.lead">
+          Zachte lijnen en plek voor iedereen. Onze ruimste eettafel.
+        </p>
+        <dl class="spec">
+          <dt data-i18n="spec.shape">Vorm</dt><dd data-i18n="item04.shape">Ovaal</dd>
+          <dt data-i18n="spec.material">Materiaal</dt><dd data-i18n="spec.materialval">Beton-look</dd>
+          <dt data-i18n="spec.color">Kleur</dt><dd data-i18n="spec.colorval">Naar keuze · LAB-PAINT</dd>
+          <dt data-i18n="spec.size">Maat</dt><dd data-i18n="spec.sizeval">Meerdere maten</dd>
+          <dt data-i18n="spec.maker">Maker</dt><dd>PEBB</dd>
+        </dl>
+        <div class="buy">
+          <span class="price"><span class="from" data-i18n="price.from">vanaf</span> € 2.400</span>
+          <button class="btn add-to-bag">In de tas</button>
+        </div>
+        <a class="bespoke-link" href="#maatwerk" data-i18n="item.bespoke">of ontwerp je eigen tafel &rarr;</a>
+      </div>
+    </article>
+
+    <!-- 05 -->
+    <article class="item" id="item-05" data-gallery="05">
+      <div class="item-gallery">
+        <span class="item-no">№ 05</span>
+        <div class="gallery-frame">
+          <button class="gnav prev" aria-label="Vorige foto">&lsaquo;</button>
+          <div class="stage"><img class="stage-img" alt="Eettafel in halve cirkel" /></div>
+          <button class="gnav next" aria-label="Volgende foto">&rsaquo;</button>
+          <span class="gallery-count"><span class="cur">01</span> / <span class="total">1</span></span>
+        </div>
+      </div>
+      <div class="item-info">
+        <span class="item-cat" data-i18n="cat.dining">Eettafel</span>
+        <h2 class="item-title">Halve cirkel</h2>
+        <p class="item-lead" data-i18n="item05.lead">
+          Strak tegen de wand of vrij in de ruimte. Een halve cirkel die
+          past waar een hele niet kan.
+        </p>
+        <dl class="spec">
+          <dt data-i18n="spec.shape">Vorm</dt><dd data-i18n="item05.shape">Halve cirkel</dd>
+          <dt data-i18n="spec.material">Materiaal</dt><dd data-i18n="spec.materialval">Beton-look</dd>
+          <dt data-i18n="spec.color">Kleur</dt><dd data-i18n="spec.colorval">Naar keuze · LAB-PAINT</dd>
+          <dt data-i18n="spec.size">Maat</dt><dd data-i18n="spec.sizeval">Meerdere maten</dd>
+          <dt data-i18n="spec.maker">Maker</dt><dd>PEBB</dd>
+        </dl>
+        <div class="buy">
+          <span class="price"><span class="from" data-i18n="price.from">vanaf</span> € 1.450</span>
+          <button class="btn add-to-bag">In de tas</button>
+        </div>
+        <a class="bespoke-link" href="#maatwerk" data-i18n="item.bespoke">of ontwerp je eigen tafel &rarr;</a>
+      </div>
+    </article>
+
+    <!-- 06 -->
+    <article class="item reverse" id="item-06" data-gallery="06">
+      <div class="item-gallery">
+        <span class="item-no">№ 06</span>
+        <div class="gallery-frame">
+          <button class="gnav prev" aria-label="Vorige foto">&lsaquo;</button>
+          <div class="stage"><img class="stage-img" alt="Salontafel kiezel en kei" /></div>
+          <button class="gnav next" aria-label="Volgende foto">&rsaquo;</button>
+          <span class="gallery-count"><span class="cur">01</span> / <span class="total">1</span></span>
+        </div>
+      </div>
+      <div class="item-info">
+        <span class="item-cat" data-i18n="cat.coffee">Salontafel</span>
+        <h2 class="item-title">Kiezel en kei</h2>
+        <p class="item-lead" data-i18n="item06.lead">
+          Lage tafels in kiezel- en keivorm. Mooi los, nog mooier als set.
+        </p>
+        <dl class="spec">
+          <dt data-i18n="spec.shape">Vorm</dt><dd data-i18n="item06.shape">Kiezel &amp; kei</dd>
+          <dt data-i18n="spec.material">Materiaal</dt><dd data-i18n="spec.materialval">Beton-look</dd>
+          <dt data-i18n="spec.color">Kleur</dt><dd data-i18n="spec.colorval">Naar keuze · LAB-PAINT</dd>
+          <dt data-i18n="spec.size">Maat</dt><dd data-i18n="spec.sizeval">Meerdere maten</dd>
+          <dt data-i18n="spec.maker">Maker</dt><dd>PEBB</dd>
+        </dl>
+        <div class="buy">
+          <span class="price"><span class="from" data-i18n="price.from">vanaf</span> € 290</span>
+          <button class="btn add-to-bag">In de tas</button>
+        </div>
+        <a class="bespoke-link" href="#maatwerk" data-i18n="item.bespoke">of ontwerp je eigen tafel &rarr;</a>
+      </div>
+    </article>
+
+    <!-- ============ OVER PEBB ============ -->
+    <section class="atelier" id="atelier">
+      <div class="atelier-image">
+        <img src="assets/over-pebb.jpg"
+             onerror="this.onerror=null;this.src='https://images.pexels.com/photos/7484165/pexels-photo-7484165.jpeg?auto=compress&cs=tinysrgb&w=1000'"
+             alt="Een tafel van PEBB wordt met de hand gemaakt" />
+      </div>
+      <div class="atelier-text">
+        <span class="kicker" data-i18n="atelier.kicker">Over PEBB</span>
+        <h2 class="atelier-quote" data-i18n="atelier.quote">
+          &ldquo;Jij komt met het idee, wij denken mee in de
+          functionaliteit.&rdquo;
+        </h2>
+        <p data-i18n="atelier.body">
+          PEBB maakt handgemaakte tafels met een uniek design van eigen
+          bodem. We maken ze in alle vormen, kleuren, soorten en maten.
+          Van een ronde eettafel tot een salontafel in kiezelvorm, en elke
+          kleur is mogelijk dankzij ons kleurenpalet met LAB-PAINT.
+        </p>
+        <a class="text-link" href="#contact" data-i18n="atelier.cta">Bezoek de showroom &rarr;</a>
+      </div>
+    </section>
+
+    <!-- ============ SHOWROOM / KLEUR ============ -->
+    <section class="press">
+      <p class="press-line" data-i18n="press.line">
+        Bezoek de showroom en kies je kleur
+      </p>
+      <div class="press-logos">
+        <span>Loods 5 · Amersfoort</span>
+        <span>LAB-PAINT</span>
+      </div>
+    </section>
+
+    <!-- ============ MAATWERK / CONTACT ============ -->
+    <section class="bespoke" id="maatwerk">
+      <div class="bespoke-inner">
+        <span class="kicker" data-i18n="bespoke.kicker">Maatwerk</span>
+        <h2 class="bespoke-title" data-i18n="bespoke.title">
+          Ontwerp je eigen tafel
+        </h2>
+        <p class="bespoke-body" data-i18n="bespoke.body">
+          Jij komt met het idee, wij denken mee in de functionaliteit. We
+          maken tafels in alle vormen, kleuren, soorten en maten. Laat je
+          gegevens achter, dan nemen we contact met je op.
+        </p>
+        <form class="signup" id="contact" onsubmit="return false;">
+          <input type="text" name="name" placeholder="Je naam" data-i18n-ph="form.name" aria-label="Naam" required />
+          <input type="email" name="email" placeholder="Je e-mailadres" data-i18n-ph="form.email" aria-label="E-mailadres" required />
+          <button type="submit" class="btn btn-dark" data-i18n="form.submit">Versturen</button>
+        </form>
+        <p class="signup-note" id="signup-note" hidden data-i18n="form.thanks">
+          Dank, we nemen snel contact met je op.
+        </p>
+        <p class="contact-direct">
+          <a href="mailto:info@pebb.nl">info@pebb.nl</a>
+          <span class="dot">·</span>
+          <a href="tel:+31618730363">06 18 73 03 63</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <span class="wordmark footer-mark">PEBB</span>
+      <p data-i18n="footer.tagline">Handgemaakte tafels · Amersfoort<br/>Showroom Loods 5</p>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <span class="footer-head" data-i18n="footer.collection">Collectie</span>
+        <a href="#item-01" data-i18n="footer.dining">Eettafels</a>
+        <a href="#item-06" data-i18n="footer.coffee">Salontafels</a>
+        <a href="#maatwerk" data-i18n="footer.bespoke">Maatwerk</a>
+      </div>
+      <div class="footer-col">
+        <span class="footer-head" data-i18n="footer.contact">Contact</span>
+        <a href="mailto:info@pebb.nl">info@pebb.nl</a>
+        <a href="tel:+31618730363">06 18 73 03 63</a>
+        <a href="#">Instagram</a>
+        <a href="#">Pinterest</a>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>© 2025 PEBB</span>
+      <span class="credit">Foto's: Pexels (placeholder)</span>
+    </div>
+  </footer>
+
+  <!-- toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
