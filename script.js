@@ -7,7 +7,10 @@ const I18N = {
     'nav.contact': 'Contact',
     'nav.bag': 'Bag',
     'hero.kicker': 'Handmade · Amersfoort',
-    'hero.title': 'A unique design, homegrown',
+    'hero.title': 'A unique design<br>that is <em>all our own</em>',
+    'hero.sub': 'Dining and coffee tables in every shape, colour and size. Made by hand, with nothing kept in stock.',
+    'hero.cta1': 'View the collection',
+    'hero.cta2': 'Request bespoke →',
     'intro.statement': 'PEBB makes handmade tables with a unique design. We make them in every shape, colour, type and size. You bring the idea, we think along on the functionality.',
     'intro.place': 'Amersfoort, NL',
     'intro.showroom': 'Showroom Loods 5',
@@ -167,6 +170,35 @@ function initGalleries() {
   });
 }
 
+// ---- header turns solid once the hero is scrolled past ----
+function initHeader() {
+  const header = document.querySelector('.site-header');
+  const hero = document.querySelector('.hero');
+  if (!header || !hero) return;
+  const onScroll = () => {
+    const trigger = hero.offsetHeight - 90;
+    header.classList.toggle('scrolled', window.scrollY > trigger);
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+}
+
+// ---- fade sections up as they enter the viewport ----
+function initReveal() {
+  const els = document.querySelectorAll('.item, .atelier, .press, .bespoke');
+  if (!('IntersectionObserver' in window)) return;
+  const io = new IntersectionObserver((entries, obs) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  els.forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight * 0.9) return; // already visible
+    el.classList.add('reveal');
+    io.observe(el);
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   cacheDutch();
 
@@ -175,6 +207,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   initGalleries();
+  initHeader();
+  initReveal();
 
   document.querySelectorAll('.add-to-bag').forEach(btn => {
     btn.addEventListener('click', () => {

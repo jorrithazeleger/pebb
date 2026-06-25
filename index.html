@@ -37,17 +37,42 @@
   </header>
 
   <!-- ============ HERO ============ -->
-  <section class="hero">
+  <section class="hero" id="hero">
     <img class="hero-img" src="assets/hero.jpg"
          onerror="this.onerror=null;this.src='https://images.pexels.com/photos/5865162/pexels-photo-5865162.jpeg?auto=compress&cs=tinysrgb&w=1600'"
          alt="Handgemaakte tafel van PEBB" />
-    <div class="hero-overlay">
+    <div class="hero-scrim" aria-hidden="true"></div>
+    <div class="hero-content">
       <span class="hero-kicker" data-i18n="hero.kicker">Handgemaakt · Amersfoort</span>
-      <h1 class="hero-title" data-i18n="hero.title">Een uniek design van eigen bodem</h1>
+      <h1 class="hero-title" data-i18n="hero.title">Een uniek design<br>van <em>eigen bodem</em></h1>
+      <p class="hero-sub" data-i18n="hero.sub">Eettafels en salontafels in elke vorm, kleur en maat. Met de hand gemaakt, en niets op voorraad.</p>
+      <div class="hero-cta">
+        <a href="#collectie" class="btn-light" data-i18n="hero.cta1">Bekijk de collectie</a>
+        <a href="#maatwerk" class="btn-link-light" data-i18n="hero.cta2">Maatwerk aanvragen &rarr;</a>
+      </div>
     </div>
+    <a href="#collectie" class="hero-scroll" aria-label="Scroll naar de collectie"><span></span></a>
   </section>
 
   <main>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Eettafels</span><span class="sep">·</span>
+        <span>Salontafels</span><span class="sep">·</span>
+        <span>Maatwerk</span><span class="sep">·</span>
+        <span>Beton-look</span><span class="sep">·</span>
+        <span>Elke kleur</span><span class="sep">·</span>
+        <span>Handgemaakt in Amersfoort</span><span class="sep">·</span>
+        <span>Eettafels</span><span class="sep">·</span>
+        <span>Salontafels</span><span class="sep">·</span>
+        <span>Maatwerk</span><span class="sep">·</span>
+        <span>Beton-look</span><span class="sep">·</span>
+        <span>Elke kleur</span><span class="sep">·</span>
+        <span>Handgemaakt in Amersfoort</span><span class="sep">·</span>
+      </div>
+    </div>
 
     <!-- ============ INTRO ============ -->
     <section class="intro">
