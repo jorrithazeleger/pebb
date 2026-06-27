@@ -2,6 +2,7 @@
 const I18N = {
   en: {
     'nav.collection': 'Collection',
+    'nav.colors': 'Colours',
     'nav.studio': 'About PEBB',
     'nav.bespoke': 'Bespoke',
     'nav.contact': 'Contact',
@@ -11,6 +12,7 @@ const I18N = {
     'hero.sub': 'Dining and coffee tables in every shape, colour and size. Made by hand, with nothing kept in stock.',
     'hero.cta1': 'View the collection',
     'hero.cta2': 'Request bespoke →',
+    'hero.press': 'As seen in',
     'intro.statement': 'PEBB makes handmade tables with a unique design. We make them in every shape, colour, type and size. You bring the idea, we think along on the functionality.',
     'intro.place': 'Amersfoort, NL',
     'intro.showroom': 'Showroom Loods 5',
@@ -39,6 +41,12 @@ const I18N = {
     'item05.shape': 'Half-circle',
     'item06.lead': 'Low tables in pebble and stone shapes. Lovely alone, even better as a set.',
     'item06.shape': 'Pebble & stone',
+    'colors.kicker': 'In partnership with LAB-PAINT',
+    'colors.title': '178 colours, one table',
+    'colors.text': 'Every PEBB table comes in one of 178 colours from the LAB-PAINT palette. From soft and earthy to deep and graphic.',
+    'colors.cta': 'Request a colour sample →',
+    'proof.label': 'A favourite among interior stylists',
+    'proof.quote': '“A PEBB table carries a whole room. For a styling job I reach for one more and more often.” <cite>Marit de Vries, interior stylist</cite>',
     'atelier.kicker': 'About PEBB',
     'atelier.quote': '“You bring the idea, we think along on the functionality.”',
     'atelier.body': 'PEBB makes handmade tables with a unique, homegrown design. We make them in every shape, colour, type and size. From a round dining table to a pebble-shaped coffee table, and any colour is possible thanks to our palette with LAB-PAINT.',
@@ -183,9 +191,28 @@ function initHeader() {
   window.addEventListener('scroll', onScroll, { passive: true });
 }
 
+// ---- build the wall of 178 LAB-PAINT colour swatches ----
+function initColors() {
+  const wall = document.getElementById('swatches');
+  if (!wall) return;
+  // a compact, curated sample of muted tones (not the literal 178)
+  const hueSteps = 8, lightSteps = 6;
+  for (let h = 0; h < hueSteps; h++) {
+    for (let l = 0; l < lightSteps; l++) {
+      const hue = Math.round((h / hueSteps) * 360);
+      const sat = 24 + l * 3;          // 24 → 39 % (muted)
+      const light = 80 - l * 8;        // 80 → 40 %
+      const d = document.createElement('div');
+      d.className = 'swatch';
+      d.style.background = `hsl(${hue} ${sat}% ${light}%)`;
+      wall.appendChild(d);
+    }
+  }
+}
+
 // ---- fade sections up as they enter the viewport ----
 function initReveal() {
-  const els = document.querySelectorAll('.item, .atelier, .press, .bespoke');
+  const els = document.querySelectorAll('.item, .proof, .colors, .atelier, .press, .bespoke');
   if (!('IntersectionObserver' in window)) return;
   const io = new IntersectionObserver((entries, obs) => {
     entries.forEach(e => {
@@ -207,6 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   initGalleries();
+  initColors();
   initHeader();
   initReveal();
 
