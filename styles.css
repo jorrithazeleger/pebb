@@ -199,30 +199,15 @@ a { color: inherit; text-decoration: none; }
 .hero-press-logos {
   display: flex;
   align-items: center;
-  gap: 14px;
-}
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 48px;
-  padding: 0 22px;
-  background: rgba(251, 250, 247, 0.14);
-  border: 0.5px solid rgba(251, 250, 247, 0.38);
-  border-radius: 12px;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  transition: background .25s, border-color .25s, transform .15s;
-}
-.hero-badge:hover {
-  background: rgba(251, 250, 247, 0.22);
-  border-color: rgba(251, 250, 247, 0.55);
-  transform: translateY(-1px);
+  gap: 28px;
+  flex-wrap: wrap;
 }
 .hero-logo {
-  height: 20px; width: auto;
-  opacity: 1;                        /* logo's tonen in eigen kleur */
+  height: 22px;
+  width: auto;
   display: block;
+  filter: brightness(0) invert(1);   /* alle logo's uniform wit */
+  opacity: 0.92;
 }
 .hero-logo-text {
   font-family: 'Fraunces', serif;
