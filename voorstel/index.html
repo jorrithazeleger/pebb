@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PEBB — Voorstellen: "Bekend van"-label</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --paper:#FBFAF7; --paper2:#F1EFE8; --ink:#15140F; --ink-soft:#3A372F;
+      --muted:#9A968B; --hairline:#E4E1D9; --accent:#A8632F;
+    }
+    *{box-sizing:border-box;}
+    body{margin:0;background:var(--paper2);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;}
+    a{color:inherit;}
+    .wrap{max-width:1040px;margin:0 auto;padding:0 24px;}
+    header{padding:22px 0;border-bottom:0.5px solid var(--hairline);background:var(--paper);}
+    .brand{font-family:'Fraunces',serif;font-weight:500;letter-spacing:0.16em;font-size:20px;}
+    .lead{padding:40px 0 8px;}
+    .lead h1{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(26px,4vw,40px);margin:0 0 12px;}
+    .lead p{color:var(--ink-soft);font-size:15px;max-width:620px;margin:0;}
+    .variant{padding:34px 0;border-top:0.5px solid var(--hairline);}
+    .variant:first-of-type{border-top:none;}
+    .vhead{display:flex;align-items:baseline;gap:12px;margin-bottom:16px;flex-wrap:wrap;}
+    .vnum{font-family:'Fraunces',serif;font-style:italic;color:var(--accent);font-size:18px;}
+    .vtitle{font-family:'Fraunces',serif;font-weight:500;font-size:20px;margin:0;}
+    .vnote{font-size:13px;color:var(--muted);margin:14px 0 0;}
+
+    /* hero-context stage */
+    .stage{position:relative;height:340px;border-radius:4px;overflow:hidden;background:var(--ink);}
+    .stage img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+    .scrim{position:absolute;inset:0;background:linear-gradient(to top,rgba(15,12,8,0.78) 0%,rgba(15,12,8,0.15) 55%,rgba(15,12,8,0.05) 100%);}
+    .scrim-top{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(15,12,8,0.55) 0%,rgba(15,12,8,0) 30%);}
+    .stage-content{position:absolute;left:30px;right:30px;bottom:28px;z-index:2;}
+    .stage .mock-title{font-family:'Fraunces',serif;color:#FBFAF7;font-size:30px;line-height:1;margin:0 0 18px;}
+    .stage .mock-title em{font-style:italic;color:#F1E7D6;}
+
+    /* shared logo styling (white) */
+    .lg{height:20px;width:auto;display:block;filter:brightness(0) invert(1);opacity:0.95;}
+    .key{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(251,250,247,0.72);white-space:nowrap;}
+
+    /* V1 — label bar */
+    .v1-bar{display:inline-flex;align-items:center;gap:18px;padding:13px 22px;background:rgba(20,16,11,0.5);border:0.5px solid rgba(251,250,247,0.28);border-radius:14px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);}
+    .v1-bar .sep{width:1px;height:18px;background:rgba(251,250,247,0.28);}
+
+    /* V2 — full-width top ribbon */
+    .ribbon{position:absolute;top:0;left:0;right:0;z-index:3;display:flex;align-items:center;justify-content:center;gap:30px;padding:13px 18px;background:rgba(15,12,8,0.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:0.5px solid rgba(251,250,247,0.14);flex-wrap:wrap;}
+
+    /* V3 — stars + keurmerk */
+    .v3-stars{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+    .v3-stars .st{color:var(--accent);font-size:13px;letter-spacing:0.12em;}
+    .v3-stars .lab{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:rgba(251,250,247,0.8);}
+    .v3-logos{display:flex;align-items:center;gap:26px;flex-wrap:wrap;}
+
+    /* V4 — accent pill */
+    .v4{display:flex;align-items:center;gap:24px;flex-wrap:wrap;}
+    .accent-pill{background:var(--accent);color:#FBFAF7;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;padding:8px 15px;border-radius:999px;white-space:nowrap;}
+    .v4-logos{display:flex;align-items:center;gap:26px;flex-wrap:wrap;}
+
+    .row-logos{display:flex;align-items:center;gap:26px;flex-wrap:wrap;}
+    footer{padding:40px 0 60px;color:var(--muted);font-size:13px;}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;">
+      <span class="brand">PEBB</span>
+      <a href="../" style="font-size:12px;color:var(--ink-soft);text-decoration:none;letter-spacing:0.04em;">&larr; terug naar de site</a>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="lead">
+      <h1>Vier voorstellen voor het &ldquo;Bekend van&rdquo;-label</h1>
+      <p>Elke variant is getoond onderin de echte hero, met de logo&rsquo;s in wit. Laat me weten welke je het beste vindt, of welke onderdelen je uit verschillende varianten wilt combineren.</p>
+    </div>
+
+    <!-- VARIANT 1 -->
+    <section class="variant">
+      <div class="vhead"><span class="vnum">01</span><h2 class="vtitle">Eén label-balk</h2></div>
+      <div class="stage">
+        <img class="bg" src="../assets/hero.jpg" alt="" />
+        <div class="scrim"></div>
+        <div class="stage-content">
+          <h3 class="mock-title">Een uniek design<br>van <em>eigen bodem</em></h3>
+          <div class="v1-bar">
+            <span class="key">Bekend van</span>
+            <span class="sep"></span>
+            <img class="lg" src="../assets/logo-vtwonen.png" alt="vtwonen" />
+            <span class="sep"></span>
+            <img class="lg" src="../assets/logo-loods5.png" alt="Loods 5" />
+            <span class="sep"></span>
+            <img class="lg" src="../assets/logo-eijerkamp.png" alt="eijerkamp" />
+          </div>
+        </div>
+      </div>
+      <p class="vnote">Eén samenhangend keurmerk dat als label van de foto aflicht. Rustig en premium.</p>
+    </section>
+
+    <!-- VARIANT 2 -->
+    <section class="variant">
+      <div class="vhead"><span class="vnum">02</span><h2 class="vtitle">Bovenbalk over volle breedte</h2></div>
+      <div class="stage">
+        <img class="bg" src="../assets/hero.jpg" alt="" />
+        <div class="scrim"></div>
+        <div class="scrim-top"></div>
+        <div class="ribbon">
+          <span class="key">Te zien bij</span>
+          <img class="lg" src="../assets/logo-vtwonen.png" alt="vtwonen" />
+          <img class="lg" src="../assets/logo-loods5.png" alt="Loods 5" />
+          <img class="lg" src="../assets/logo-eijerkamp.png" alt="eijerkamp" />
+        </div>
+        <div class="stage-content">
+          <h3 class="mock-title">Een uniek design<br>van <em>eigen bodem</em></h3>
+        </div>
+      </div>
+      <p class="vnote">Een dunne strip bovenaan, over de volle breedte. Direct zichtbaar, heel prominent.</p>
+    </section>
+
+    <!-- VARIANT 3 -->
+    <section class="variant">
+      <div class="vhead"><span class="vnum">03</span><h2 class="vtitle">Met sterren + keurmerk</h2></div>
+      <div class="stage">
+        <img class="bg" src="../assets/hero.jpg" alt="" />
+        <div class="scrim"></div>
+        <div class="stage-content">
+          <h3 class="mock-title">Een uniek design<br>van <em>eigen bodem</em></h3>
+          <div class="v3-stars">
+            <span class="st">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+            <span class="lab">Gewild bij interieurstylisten</span>
+          </div>
+          <div class="v3-logos">
+            <span class="key">Bekend van</span>
+            <img class="lg" src="../assets/logo-vtwonen.png" alt="vtwonen" />
+            <img class="lg" src="../assets/logo-loods5.png" alt="Loods 5" />
+            <img class="lg" src="../assets/logo-eijerkamp.png" alt="eijerkamp" />
+          </div>
+        </div>
+      </div>
+      <p class="vnote">Voegt sociale bewijskracht toe: sterren plus de namen. Sterkste overtuiging.</p>
+    </section>
+
+    <!-- VARIANT 4 -->
+    <section class="variant">
+      <div class="vhead"><span class="vnum">04</span><h2 class="vtitle">Accentkleur-label</h2></div>
+      <div class="stage">
+        <img class="bg" src="../assets/hero.jpg" alt="" />
+        <div class="scrim"></div>
+        <div class="stage-content">
+          <h3 class="mock-title">Een uniek design<br>van <em>eigen bodem</em></h3>
+          <div class="v4">
+            <span class="accent-pill">Bekend van</span>
+            <div class="v4-logos">
+              <img class="lg" src="../assets/logo-vtwonen.png" alt="vtwonen" />
+              <img class="lg" src="../assets/logo-loods5.png" alt="Loods 5" />
+              <img class="lg" src="../assets/logo-eijerkamp.png" alt="eijerkamp" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="vnote">Het terracotta pill-label trekt het oog er meteen naartoe. Speels maar verzorgd.</p>
+    </section>
+
+  </div>
+
+  <footer>
+    <div class="wrap">Interne voorstelpagina &middot; niet geïndexeerd &middot; PEBB</div>
+  </footer>
+</body>
+</html>
