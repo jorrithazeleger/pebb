@@ -185,8 +185,9 @@ function initHeader() {
   const hero = document.querySelector('.hero');
   if (!header || !hero) return;
   const onScroll = () => {
-    const trigger = hero.offsetHeight - 90;
-    header.classList.toggle('scrolled', window.scrollY > trigger);
+    const y = window.scrollY;
+    header.classList.toggle('scrolled', y > hero.offsetHeight - 90);
+    document.body.classList.toggle('topbar-hidden', y > 40);  // bovenbalk verdwijnt bij scrollen
   };
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
