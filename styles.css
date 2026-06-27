@@ -560,6 +560,13 @@ body.topbar-hidden .site-header { top: 0; }
 }
 .signup input:focus { outline: none; border-color: var(--ink); }
 .signup .btn-dark { height: 48px; padding: 0 28px; }
+.bespoke-config { margin: 0 0 24px; }
+.bespoke-config a {
+  font-size: 13px; color: var(--accent);
+  border-bottom: 0.5px solid var(--accent); padding-bottom: 2px;
+  transition: color .2s, border-color .2s;
+}
+.bespoke-config a:hover { color: var(--ink); border-color: var(--ink); }
 .signup-note {
   margin-top: 18px; font-size: 13px; color: var(--accent);
 }

@@ -3,6 +3,7 @@ const I18N = {
   en: {
     'nav.collection': 'Collection',
     'nav.colors': 'Colours',
+    'nav.config': 'Configurator',
     'nav.studio': 'About PEBB',
     'nav.bespoke': 'Bespoke',
     'nav.contact': 'Contact',
@@ -56,6 +57,7 @@ const I18N = {
     'bespoke.kicker': 'Bespoke',
     'bespoke.title': 'Design your own table',
     'bespoke.body': 'You bring the idea, we think along on the functionality. We make tables in every shape, colour, type and size. Leave your details and we will get in touch.',
+    'bespoke.config': 'Or build your table now in the 3D configurator →',
     'form.submit': 'Send',
     'form.thanks': 'Thanks, we will be in touch soon.',
     'footer.tagline': 'Handmade tables · Amersfoort<br>Showroom Loods 5',
