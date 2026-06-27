@@ -13,6 +13,19 @@
 </head>
 <body>
 
+  <!-- ============ TOPBAR / TE ZIEN BIJ ============ -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <span class="topbar-label" data-i18n="press.seen">Te zien bij</span>
+      <img class="topbar-logo" src="assets/logo-vtwonen.png" alt="vtwonen"
+           onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'topbar-fallback',textContent:this.alt}))" />
+      <img class="topbar-logo" src="assets/logo-loods5.png" alt="Loods 5"
+           onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'topbar-fallback',textContent:this.alt}))" />
+      <img class="topbar-logo" src="assets/logo-eijerkamp.png" alt="eijerkamp"
+           onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'topbar-fallback',textContent:this.alt}))" />
+    </div>
+  </div>
+
   <!-- ============ HEADER ============ -->
   <header class="site-header" id="top">
     <a href="#top" class="wordmark" aria-label="PEBB home">PEBB</a>
@@ -50,17 +63,6 @@
       <div class="hero-cta">
         <a href="#collectie" class="btn-light" data-i18n="hero.cta1">Bekijk de collectie</a>
         <a href="#maatwerk" class="btn-link-light" data-i18n="hero.cta2">Maatwerk aanvragen &rarr;</a>
-      </div>
-      <div class="hero-press">
-        <span class="hero-press-label" data-i18n="hero.press">Bekend van</span>
-        <div class="hero-press-logos">
-          <img class="hero-logo logo-vtwonen" src="assets/logo-vtwonen.png" alt="vtwonen"
-               onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'hero-logo-text',textContent:this.alt}))" />
-          <img class="hero-logo logo-loods5" src="assets/logo-loods5.png" alt="Loods 5"
-               onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'hero-logo-text',textContent:this.alt}))" />
-          <img class="hero-logo logo-eijerkamp" src="assets/logo-eijerkamp.png" alt="Eijerkamp"
-               onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'hero-logo-text',textContent:this.alt}))" />
-        </div>
       </div>
     </div>
     <a href="#collectie" class="hero-scroll" aria-label="Scroll naar de collectie"><span></span></a>

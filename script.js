@@ -13,6 +13,7 @@ const I18N = {
     'hero.cta1': 'View the collection',
     'hero.cta2': 'Request bespoke →',
     'hero.press': 'As seen in',
+    'press.seen': 'As seen in',
     'intro.statement': 'PEBB makes handmade tables with a unique design. We make them in every shape, colour, type and size. You bring the idea, we think along on the functionality.',
     'intro.place': 'Amersfoort, NL',
     'intro.showroom': 'Showroom Loods 5',

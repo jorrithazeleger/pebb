@@ -9,6 +9,7 @@
   --accent: #A8632F;
   --maxw: 1180px;
   --gutter: clamp(20px, 5vw, 64px);
+  --ribbon-h: 42px;
 }
 
 * { box-sizing: border-box; }
@@ -32,9 +33,47 @@ a { color: inherit; text-decoration: none; }
 ::selection { background: var(--accent); color: var(--paper); }
 
 /* ---------- HEADER ---------- */
-.site-header {
+/* ---------- TOPBAR / TE ZIEN BIJ ---------- */
+.topbar {
   position: fixed;
   top: 0; left: 0; right: 0;
+  z-index: 60;
+  height: var(--ribbon-h);
+  background: #15140F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--gutter);
+  border-bottom: 0.5px solid rgba(251, 250, 247, 0.1);
+}
+.topbar-inner {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+.topbar-label {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(251, 250, 247, 0.55);
+  white-space: nowrap;
+}
+.topbar-logo {
+  height: 16px;
+  width: auto;
+  display: block;
+  filter: brightness(0) invert(1);
+  opacity: 0.92;
+}
+.topbar-fallback {
+  font-family: 'Fraunces', serif;
+  font-size: 14px;
+  color: #FBFAF7;
+}
+
+.site-header {
+  position: fixed;
+  top: var(--ribbon-h); left: 0; right: 0;
   z-index: 50;
   display: flex;
   align-items: center;
@@ -61,8 +100,9 @@ a { color: inherit; text-decoration: none; }
 .site-header:not(.scrolled) .lang { color: rgba(251, 250, 247, 0.6); }
 .site-header:not(.scrolled) .lang-sep { color: rgba(251, 250, 247, 0.45); }
 
-/* keep anchored sections clear of the fixed header */
-.item, .atelier, .bespoke, .press, .index-bar { scroll-margin-top: 84px; }
+/* keep anchored sections clear of the fixed topbar + header */
+.item, .atelier, .bespoke, .press, .index-bar,
+.colors, .proof { scroll-margin-top: 104px; }
 
 .wordmark {
   font-family: 'Fraunces', serif;
@@ -183,38 +223,7 @@ a { color: inherit; text-decoration: none; }
   transition: border-color .25s;
 }
 .btn-link-light:hover { border-color: #FBFAF7; }
-.hero-press {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  margin-top: 34px;
-  flex-wrap: wrap;
-}
-.hero-press-label {
-  font-size: 10px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(251, 250, 247, 0.6);
-}
-.hero-press-logos {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  flex-wrap: wrap;
-}
-.hero-logo {
-  height: 22px;
-  width: auto;
-  display: block;
-  filter: brightness(0) invert(1);   /* alle logo's uniform wit */
-  opacity: 0.92;
-}
-.hero-logo-text {
-  font-family: 'Fraunces', serif;
-  font-size: 17px;
-  letter-spacing: 0.03em;
-  color: #FBFAF7;
-}
+/* (hero-press verplaatst naar de topbar bovenaan) */
 .hero-scroll {
   position: absolute; bottom: 26px; left: 50%;
   transform: translateX(-50%);
@@ -767,4 +776,7 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 520px) {
   .footer-cols { flex-direction: column; gap: 28px; }
   .site-footer { grid-template-columns: 1fr; }
+  .topbar-inner { gap: 16px; }
+  .topbar-label { display: none; }
+  .topbar-logo { height: 14px; }
 }
